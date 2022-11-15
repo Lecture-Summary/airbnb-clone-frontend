@@ -15,7 +15,7 @@ export default function Room() {
 
   return (
     <VStack alignItems={'flex-start'}>
-      <Box position='relative' overflow='hidden' mb={3} rounded={'3xl'}>
+      <Box position='relative' overflow='hidden' mb={3} rounded={'2xl'}>
         <Image
           minH='280'
           src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-607458038229062130/original/1e20dfc7-ea12-44b2-a837-2bdcd8502133.jpeg?im_w=720'
