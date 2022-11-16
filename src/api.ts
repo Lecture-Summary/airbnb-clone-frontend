@@ -40,3 +40,12 @@ export const githubLogIn = (code: string) =>
       { headers: { 'X-CSRFToken': Cookie.get('csrftoken') } || '' }
     )
     .then((response) => response.status)
+
+export const kakaoLogin = (code: string) =>
+  instance
+    .post(
+      'users/kakao',
+      { code },
+      { headers: { 'X-CSRFToken': Cookie.get('csrftoken') } || '' }
+    )
+    .then((response) => response.status)
