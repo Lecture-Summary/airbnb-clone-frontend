@@ -20,9 +20,10 @@ import { IReview, IRoomDetail } from '../types'
 export default function RoomDetail() {
   const { roomPk } = useParams()
   const { isLoading, data } = useQuery<IRoomDetail>(['rooms', roomPk], getRoom)
-  const { data: reviewsData, isLoading: isReviewsLoading } = useQuery<
-    IReview[]
-  >(['rooms', roomPk, 'reviews'], getRoomReviews)
+  const { data: reviewsData } = useQuery<IReview[]>(
+    ['rooms', roomPk, 'reviews'],
+    getRoomReviews
+  )
   return (
     <Box mt={10} px={{ base: 10, lg: 40 }}>
       <Skeleton height='43px' isLoaded={!isLoading}>
